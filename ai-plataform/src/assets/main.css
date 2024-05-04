@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root{
+    --primary:#1A60FE;
+    
+    --background: #F4EDE5;
+    --background-second: #221F26;
+    --background-shading: #d1d0d7;
+    
+    --text: #221F26;
+    --text-second: #F4EDE5;
+    
+    --shading: #6a696e;
+    
+    --card: #FEFDF9;
+  }
+  
+  .dark {
+    --background: #221F26;
+    --background-second: #FEFDF9;
+    
+    --text: #FEFDF9;
+    --text-second: #221F26;
+  }
+
+  body {
+    @apply font-inter flex flex-col justify-center text-text bg-background w-full transition-all duration-500 lg:overflow-x-hidden
+  }
+
+  #app{
+    @apply max-w-full
+  }
+  
+  li{
+    @apply list-none cursor-pointer
+  }
+
+}
+
+@layer components {
+  .default-page-padding {
+    @apply sm:px-16 px-0
+  }
+
+  .btn-default {
+    @apply bg-primary rounded-md p-2 text-card dark:text-text shadow-2xl flex justify-center items-center
+  }
+  .btn-default:hover {
+    @apply bg-blue-800 animate-pulse
+  }
+  .btn-seeMore {
+    @apply border-2 text-primary rounded-lg p-4 mt-8 border-primary dark:text-primary dark:border-primary
+  }
+
+}
