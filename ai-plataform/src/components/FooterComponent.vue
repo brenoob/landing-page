@@ -26,7 +26,7 @@
             <li>Hiring</li>
         </ul>
         <div class="search flex gap-1">
-            <input type="text" placeholder="Search..." class="w-[204px] h-[32px] rounded-md">
+            <input type="text" placeholder="Search..." class="w-[204px] h-[32px] rounded-md px-2 text-text dark:text-textSecond">
             <button class="btn-default bg-backgroundSecond dark:bg-background max-w-28 max-h-8">Search</button>
         </div>
     </footer>
