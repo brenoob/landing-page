@@ -1,6 +1,6 @@
 <template>
     <footer class="flex relative justify-between text-card bg-primary w-full max-h-[270px] p-8 mt-16 rounded-lg">
-        <div class="flex flex-col gap-4 j">
+        <div class="flex flex-col gap-4">
             
             <LogoComponent class="fill-card"/>
 

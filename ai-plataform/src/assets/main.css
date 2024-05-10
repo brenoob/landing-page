@@ -3,56 +3,75 @@
 @tailwind utilities;
 
 @layer base {
-  :root{
-    --primary:#1A60FE;
-    
-    --background: #F4EDE5;
-    --background-second: #221F26;
+  :root {
+    --primary: #1a60fe;
+
+    --background: #f4ede5;
+    --background-second: #221f26;
     --background-shading: #d1d0d7;
-    
-    --text: #221F26;
-    --text-second: #F4EDE5;
-    
+
+    --text: #221f26;
+    --text-second: #f4ede5;
+
     --shading: #6a696e;
-    
-    --card: #FEFDF9;
+
+    --card: #fefdf9;
   }
-  
+
   .dark {
-    --background: #221F26;
-    --background-second: #FEFDF9;
-    
-    --text: #FEFDF9;
-    --text-second: #221F26;
+    --background: #221f26;
+    --background-second: #fefdf9;
+
+    --text: #fefdf9;
+    --text-second: #221f26;
+  }
+
+  /* scrollbar style */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--card) var(--shading);
+    border-radius: 5px;
   }
 
   body {
-    @apply font-inter flex flex-col justify-center text-text bg-background w-full transition-all duration-500 lg:overflow-x-hidden
+    @apply font-inter flex flex-col justify-center text-text bg-background w-full transition-all duration-500 overflow-x-hidden;
   }
 
-  #app{
-    @apply max-w-full
-  }
-  
-  li{
-    @apply list-none cursor-pointer
+  main {
+    @apply min-h-screen
   }
 
+  li {
+    @apply cursor-pointer border-b-4 border-transparent
+    hover:border-b-4 hover:ease-linear hover:transition duration-700 hover:scale-110;
+  }
+
+  nav li {
+    @apply hover:border-primary;
+  }
+
+  footer li {
+    @apply hover:border-card;
+  }
 }
 
 @layer components {
   .default-page-padding {
-    @apply sm:px-16 px-0
+    @apply sm:px-16 px-0;
   }
 
   .btn-default {
-    @apply bg-primary rounded-md p-2 text-card dark:text-text shadow-2xl flex justify-center items-center
+    @apply bg-primary rounded-md p-2 text-card dark:text-text shadow-2xl flex justify-center items-center;
   }
   .btn-default:hover {
-    @apply bg-blue-800 animate-pulse
+    @apply bg-blue-800 animate-pulse;
   }
   .btn-seeMore {
-    @apply border-2 text-primary rounded-lg p-4 mt-8 border-primary dark:text-primary dark:border-primary
+    @apply border-2 text-primary rounded-lg p-4 mt-8 border-primary dark:text-primary dark:border-primary;
   }
-
+  @layer utilities {
+    .marcas {
+      @apply bg-card dark:bg-white/30 p-4 rounded-lg;
+    }
+  }
 }

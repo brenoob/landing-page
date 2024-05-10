@@ -1,20 +1,20 @@
 <template>
     <nav class="default-page-padding flex justify-between text-text items-center min-h-[78px] min-w-max py-4">
-        <LogoComponent :class="'text-primary'" class="fill-primary" />
+        <RouterLink to="/" class="font-semibold"><LogoComponent :class="'text-primary'" class="fill-primary" /></RouterLink>
         <div>
             <ul class="flex gap-4">
-                <li>About</li>
-                <li>Features</li>
-                <li>Our Process</li>
-                <li>Benefits</li>
+                <RouterLink to="/about"><li>About</li></RouterLink>
+                <RouterLink to=""> <li>Features</li></RouterLink>
+                <RouterLink to=""> <li>Our Process</li></RouterLink>
+                <RouterLink to=""> <li>Benefits</li></RouterLink>
             </ul>
         </div>
         <div class="flex gap-4">
             <button>
-                <RouterLink to="/" class="font-semibold">Log In</RouterLink>
+                Log In
             </button>
             <button class="btn-default">
-                <RouterLink to="/about">Get Started</RouterLink>
+                <RouterLink to="/register">Get Started</RouterLink>
             </button>
         </div>
     </nav>
