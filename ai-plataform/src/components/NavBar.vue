@@ -14,7 +14,7 @@
                 Log In
             </button>
             <button class="btn-default">
-                <RouterLink to="/register">Get Started</RouterLink>
+                <RouterLink to="/login">Get Started</RouterLink>
             </button>
         </div>
     </nav>
