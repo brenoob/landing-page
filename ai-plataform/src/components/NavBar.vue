@@ -1,12 +1,22 @@
 <template>
     <nav class="default-page-padding flex justify-between text-text items-center min-h-[78px] min-w-max py-4">
-        <RouterLink to="/" class="font-semibold"><LogoComponent :class="'text-primary'" class="fill-primary" /></RouterLink>
+        <RouterLink to="/" class="font-semibold">
+            <LogoComponent :class="'text-primary'" class="fill-primary" />
+        </RouterLink>
         <div>
             <ul class="flex gap-4">
-                <RouterLink to="/about"><li>About</li></RouterLink>
-                <RouterLink to=""> <li>Features</li></RouterLink>
-                <RouterLink to=""> <li>Our Process</li></RouterLink>
-                <RouterLink to=""> <li>Benefits</li></RouterLink>
+                <li>
+                    <RouterLink to="/about">About</RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="">Features</RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="">Our Process</RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="">Benefits</RouterLink>
+                </li>
             </ul>
         </div>
         <div class="flex gap-4">
